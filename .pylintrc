@@ -1,0 +1,10 @@
+[MASTER]
+ignore=.git, __pycache__, .pytest_cache, allure-report, allure-results
+
+[MESSAGES CONTROL]
+disable=
+    C0103,
+    C0114,
+
+[FORMAT]
+max-line-length=120

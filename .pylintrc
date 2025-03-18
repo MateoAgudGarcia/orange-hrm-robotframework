@@ -5,6 +5,9 @@ ignore=.git, __pycache__, .pytest_cache, allure-report, allure-results
 disable=
     C0103,
     C0114,
+    C0116,
+    W1510,
+    E0401
 
 [FORMAT]
 max-line-length=120

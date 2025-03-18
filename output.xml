@@ -1,142 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.2.2 (Python 3.13.2 on linux)" generated="2025-03-18T19:56:12.967539" rpa="false" schemaversion="5">
+<robot generator="Rebot 7.2.2 (Python 3.13.2 on linux)" generated="2025-03-18T23:02:34.826709" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests">
 <suite id="s1-s1" name="Login" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests/Login.robot">
 <test id="s1-s1-t1" name="Verify Successful Login to OrangeHRM" line="18">
 <kw name="Opening Browser" owner="Common">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-03-18T23:02:30.132099" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7f62f0e416a0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-03-18T23:02:30.131801" elapsed="0.000343"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-03-18T23:02:30.132287" elapsed="0.000147"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-03-18T23:02:30.132545" elapsed="0.000123"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-18T19:56:12.756849" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
-<msg time="2025-03-18T19:56:12.959645" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2025-03-18T19:56:12.959821" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x55a7c4b4b46a &lt;unknown&gt;
-#1 0x55a7c4604ed0 &lt;unknown&gt;
-#2 0x55a7c463ec8f &lt;unknown&gt;
-#3 0x55a7c463a68f &lt;unknown&gt;
-#4 0x55a7c468b1cf &lt;unknown&gt;
-#5 0x55a7c468a706 &lt;unknown&gt;
-#6 0x55a7c467c633 &lt;unknown&gt;
-#7 0x55a7c46481be &lt;unknown&gt;
-#8 0x55a7c4649981 &lt;unknown&gt;
-#9 0x55a7c4b1186b &lt;unknown&gt;
-#10 0x55a7c4b1573c &lt;unknown&gt;
-#11 0x55a7c4af8f12 &lt;unknown&gt;
-#12 0x55a7c4b162b4 &lt;unknown&gt;
-#13 0x55a7c4add0af &lt;unknown&gt;
-#14 0x55a7c4b39ad8 &lt;unknown&gt;
-#15 0x55a7c4b39cb6 &lt;unknown&gt;
-#16 0x55a7c4b4a2e6 &lt;unknown&gt;
-#17 0x7fa49a29caa4 &lt;unknown&gt;
-#18 0x7fa49a329c3c &lt;unknown&gt;
-</msg>
+<msg time="2025-03-18T23:02:30.133062" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
+<arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-03-18T19:56:12.756662" elapsed="0.205181">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x55a7c4b4b46a &lt;unknown&gt;
-#1 0x55a7c4604ed0 &lt;unknown&gt;
-#2 0x55a7c463ec8f &lt;unknown&gt;
-#3 0x55a7c463a68f &lt;unknown&gt;
-#4 0x55a7c468b1cf &lt;unknown&gt;
-#5 0x55a7c468a706 &lt;unknown&gt;
-#6 0x55a7c467c633 &lt;unknown&gt;
-#7 0x55a7c46481be &lt;unknown&gt;
-#8 0x55a7c4649981 &lt;unknown&gt;
-#9 0x55a7c4b1186b &lt;unknown&gt;
-#10 0x55a7c4b1573c &lt;unknown&gt;
-#11 0x55a7c4af8f12 &lt;unknown&gt;
-#12 0x55a7c4b162b4 &lt;unknown&gt;
-#13 0x55a7c4add0af &lt;unknown&gt;
-#14 0x55a7c4b39ad8 &lt;unknown&gt;
-#15 0x55a7c4b39cb6 &lt;unknown&gt;
-#16 0x55a7c4b4a2e6 &lt;unknown&gt;
-#17 0x7fa49a29caa4 &lt;unknown&gt;
-#18 0x7fa49a329c3c &lt;unknown&gt;
-</status>
+<status status="PASS" start="2025-03-18T23:02:30.132789" elapsed="2.735536"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-03-18T23:02:32.868588" elapsed="0.057654"/>
 </kw>
 <arg>${homepage}</arg>
 <arg>${browser}</arg>
-<status status="FAIL" start="2025-03-18T19:56:12.756352" elapsed="0.205692">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x55a7c4b4b46a &lt;unknown&gt;
-#1 0x55a7c4604ed0 &lt;unknown&gt;
-#2 0x55a7c463ec8f &lt;unknown&gt;
-#3 0x55a7c463a68f &lt;unknown&gt;
-#4 0x55a7c468b1cf &lt;unknown&gt;
-#5 0x55a7c468a706 &lt;unknown&gt;
-#6 0x55a7c467c633 &lt;unknown&gt;
-#7 0x55a7c46481be &lt;unknown&gt;
-#8 0x55a7c4649981 &lt;unknown&gt;
-#9 0x55a7c4b1186b &lt;unknown&gt;
-#10 0x55a7c4b1573c &lt;unknown&gt;
-#11 0x55a7c4af8f12 &lt;unknown&gt;
-#12 0x55a7c4b162b4 &lt;unknown&gt;
-#13 0x55a7c4add0af &lt;unknown&gt;
-#14 0x55a7c4b39ad8 &lt;unknown&gt;
-#15 0x55a7c4b39cb6 &lt;unknown&gt;
-#16 0x55a7c4b4a2e6 &lt;unknown&gt;
-#17 0x7fa49a29caa4 &lt;unknown&gt;
-#18 0x7fa49a329c3c &lt;unknown&gt;
-</status>
+<status status="PASS" start="2025-03-18T23:02:30.131090" elapsed="2.795372"/>
 </kw>
 <kw name="Login" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:32.927673" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-03-18T23:02:32.927463" elapsed="0.533145"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.460815" elapsed="0.223225"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.684245" elapsed="0.014906"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:33.699598" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
+<arg>${login_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.699327" elapsed="0.070190"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:33.770031" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
+<arg>${login_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.769724" elapsed="0.071027"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${login_submit}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.840998" elapsed="0.017608"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:33.859047" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
+<arg>${login_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T23:02:33.858783" elapsed="0.625833"/>
+</kw>
 <arg>${site_url}</arg>
 <arg>${user_name}</arg>
 <arg>${password}</arg>
-<status status="NOT RUN" start="2025-03-18T19:56:12.962318" elapsed="0.000045"/>
+<status status="PASS" start="2025-03-18T23:02:32.926838" elapsed="1.557919"/>
 </kw>
 <kw name="Verify dashboard is displayed" owner="Dashboard">
-<status status="NOT RUN" start="2025-03-18T19:56:12.962492" elapsed="0.000031"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-18T23:02:34.485341" elapsed="0.220120"/>
+</kw>
+<kw name="Verify page title is correct" owner="Common">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:34.732267" level="INFO">${actual_title} = Dashboard</msg>
+<var>${actual_title}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-18T23:02:34.706072" elapsed="0.026271"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<arg>${expected_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-18T23:02:34.732557" elapsed="0.000305"/>
+</kw>
+<arg>Dashboard</arg>
+<arg>${title}</arg>
+<status status="PASS" start="2025-03-18T23:02:34.705693" elapsed="0.027296"/>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-18T23:02:34.742433" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
+<arg>${login_title}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-03-18T23:02:34.733149" elapsed="0.009388"/>
+</kw>
+<status status="PASS" start="2025-03-18T23:02:34.485008" elapsed="0.257641"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-18T19:56:12.962633" elapsed="0.000027"/>
+<status status="PASS" start="2025-03-18T23:02:34.742812" elapsed="0.079618"/>
 </kw>
 <doc>This test case verifies that the user is able to successfully Login and Logout to OrangeHRM using Page Object</doc>
 <tag>smoke</tag>
-<status status="FAIL" start="2025-03-18T19:56:12.755164" elapsed="0.207634">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x55a7c4b4b46a &lt;unknown&gt;
-#1 0x55a7c4604ed0 &lt;unknown&gt;
-#2 0x55a7c463ec8f &lt;unknown&gt;
-#3 0x55a7c463a68f &lt;unknown&gt;
-#4 0x55a7c468b1cf &lt;unknown&gt;
-#5 0x55a7c468a706 &lt;unknown&gt;
-#6 0x55a7c467c633 &lt;unknown&gt;
-#7 0x55a7c46481be &lt;unknown&gt;
-#8 0x55a7c4649981 &lt;unknown&gt;
-#9 0x55a7c4b1186b &lt;unknown&gt;
-#10 0x55a7c4b1573c &lt;unknown&gt;
-#11 0x55a7c4af8f12 &lt;unknown&gt;
-#12 0x55a7c4b162b4 &lt;unknown&gt;
-#13 0x55a7c4add0af &lt;unknown&gt;
-#14 0x55a7c4b39ad8 &lt;unknown&gt;
-#15 0x55a7c4b39cb6 &lt;unknown&gt;
-#16 0x55a7c4b4a2e6 &lt;unknown&gt;
-#17 0x7fa49a29caa4 &lt;unknown&gt;
-#18 0x7fa49a329c3c &lt;unknown&gt;
-
-[RETRY] FAIL on 3. retry.</status>
+<status status="PASS" start="2025-03-18T23:02:30.130171" elapsed="4.692448"/>
 </test>
 <doc>Page Object in Robot Framework</doc>
-<status status="FAIL" start="2025-03-18T19:56:10.671367" elapsed="2.291824"/>
+<status status="PASS" start="2025-03-18T23:02:29.812520" elapsed="5.010618"/>
 </suite>
-<status status="FAIL" start="2025-03-18T19:56:10.659163" elapsed="2.304911"/>
+<status status="PASS" start="2025-03-18T23:02:29.800046" elapsed="5.023716"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">smoke</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
-<stat name="Login" id="s1-s1" pass="0" fail="1" skip="0">Tests.Login</stat>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-03-18T19:56:12.755264" level="WARN" html="true">Test '&lt;a onclick="makeElementVisible('s1-s1-t1')" href="#s1-s1-t1" title="Link to details"&gt;Verify Successful Login to OrangeHRM&lt;/a&gt;' has been retried 3 times (max: 3).</msg>
 </errors>
 </robot>

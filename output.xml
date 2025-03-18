@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.2.2 (Python 3.13.2 on linux)" generated="2025-03-18T19:56:12.967539" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests">
+<suite id="s1-s1" name="Login" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests/Login.robot">
+<test id="s1-s1-t1" name="Verify Successful Login to OrangeHRM" line="18">
+<kw name="Opening Browser" owner="Common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-18T19:56:12.756849" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
+<msg time="2025-03-18T19:56:12.959645" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-03-18T19:56:12.959821" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55a7c4b4b46a &lt;unknown&gt;
+#1 0x55a7c4604ed0 &lt;unknown&gt;
+#2 0x55a7c463ec8f &lt;unknown&gt;
+#3 0x55a7c463a68f &lt;unknown&gt;
+#4 0x55a7c468b1cf &lt;unknown&gt;
+#5 0x55a7c468a706 &lt;unknown&gt;
+#6 0x55a7c467c633 &lt;unknown&gt;
+#7 0x55a7c46481be &lt;unknown&gt;
+#8 0x55a7c4649981 &lt;unknown&gt;
+#9 0x55a7c4b1186b &lt;unknown&gt;
+#10 0x55a7c4b1573c &lt;unknown&gt;
+#11 0x55a7c4af8f12 &lt;unknown&gt;
+#12 0x55a7c4b162b4 &lt;unknown&gt;
+#13 0x55a7c4add0af &lt;unknown&gt;
+#14 0x55a7c4b39ad8 &lt;unknown&gt;
+#15 0x55a7c4b39cb6 &lt;unknown&gt;
+#16 0x55a7c4b4a2e6 &lt;unknown&gt;
+#17 0x7fa49a29caa4 &lt;unknown&gt;
+#18 0x7fa49a329c3c &lt;unknown&gt;
+</msg>
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-03-18T19:56:12.756662" elapsed="0.205181">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55a7c4b4b46a &lt;unknown&gt;
+#1 0x55a7c4604ed0 &lt;unknown&gt;
+#2 0x55a7c463ec8f &lt;unknown&gt;
+#3 0x55a7c463a68f &lt;unknown&gt;
+#4 0x55a7c468b1cf &lt;unknown&gt;
+#5 0x55a7c468a706 &lt;unknown&gt;
+#6 0x55a7c467c633 &lt;unknown&gt;
+#7 0x55a7c46481be &lt;unknown&gt;
+#8 0x55a7c4649981 &lt;unknown&gt;
+#9 0x55a7c4b1186b &lt;unknown&gt;
+#10 0x55a7c4b1573c &lt;unknown&gt;
+#11 0x55a7c4af8f12 &lt;unknown&gt;
+#12 0x55a7c4b162b4 &lt;unknown&gt;
+#13 0x55a7c4add0af &lt;unknown&gt;
+#14 0x55a7c4b39ad8 &lt;unknown&gt;
+#15 0x55a7c4b39cb6 &lt;unknown&gt;
+#16 0x55a7c4b4a2e6 &lt;unknown&gt;
+#17 0x7fa49a29caa4 &lt;unknown&gt;
+#18 0x7fa49a329c3c &lt;unknown&gt;
+</status>
+</kw>
+<arg>${homepage}</arg>
+<arg>${browser}</arg>
+<status status="FAIL" start="2025-03-18T19:56:12.756352" elapsed="0.205692">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55a7c4b4b46a &lt;unknown&gt;
+#1 0x55a7c4604ed0 &lt;unknown&gt;
+#2 0x55a7c463ec8f &lt;unknown&gt;
+#3 0x55a7c463a68f &lt;unknown&gt;
+#4 0x55a7c468b1cf &lt;unknown&gt;
+#5 0x55a7c468a706 &lt;unknown&gt;
+#6 0x55a7c467c633 &lt;unknown&gt;
+#7 0x55a7c46481be &lt;unknown&gt;
+#8 0x55a7c4649981 &lt;unknown&gt;
+#9 0x55a7c4b1186b &lt;unknown&gt;
+#10 0x55a7c4b1573c &lt;unknown&gt;
+#11 0x55a7c4af8f12 &lt;unknown&gt;
+#12 0x55a7c4b162b4 &lt;unknown&gt;
+#13 0x55a7c4add0af &lt;unknown&gt;
+#14 0x55a7c4b39ad8 &lt;unknown&gt;
+#15 0x55a7c4b39cb6 &lt;unknown&gt;
+#16 0x55a7c4b4a2e6 &lt;unknown&gt;
+#17 0x7fa49a29caa4 &lt;unknown&gt;
+#18 0x7fa49a329c3c &lt;unknown&gt;
+</status>
+</kw>
+<kw name="Login" owner="Login">
+<arg>${site_url}</arg>
+<arg>${user_name}</arg>
+<arg>${password}</arg>
+<status status="NOT RUN" start="2025-03-18T19:56:12.962318" elapsed="0.000045"/>
+</kw>
+<kw name="Verify dashboard is displayed" owner="Dashboard">
+<status status="NOT RUN" start="2025-03-18T19:56:12.962492" elapsed="0.000031"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-18T19:56:12.962633" elapsed="0.000027"/>
+</kw>
+<doc>This test case verifies that the user is able to successfully Login and Logout to OrangeHRM using Page Object</doc>
+<tag>smoke</tag>
+<status status="FAIL" start="2025-03-18T19:56:12.755164" elapsed="0.207634">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x55a7c4b4b46a &lt;unknown&gt;
+#1 0x55a7c4604ed0 &lt;unknown&gt;
+#2 0x55a7c463ec8f &lt;unknown&gt;
+#3 0x55a7c463a68f &lt;unknown&gt;
+#4 0x55a7c468b1cf &lt;unknown&gt;
+#5 0x55a7c468a706 &lt;unknown&gt;
+#6 0x55a7c467c633 &lt;unknown&gt;
+#7 0x55a7c46481be &lt;unknown&gt;
+#8 0x55a7c4649981 &lt;unknown&gt;
+#9 0x55a7c4b1186b &lt;unknown&gt;
+#10 0x55a7c4b1573c &lt;unknown&gt;
+#11 0x55a7c4af8f12 &lt;unknown&gt;
+#12 0x55a7c4b162b4 &lt;unknown&gt;
+#13 0x55a7c4add0af &lt;unknown&gt;
+#14 0x55a7c4b39ad8 &lt;unknown&gt;
+#15 0x55a7c4b39cb6 &lt;unknown&gt;
+#16 0x55a7c4b4a2e6 &lt;unknown&gt;
+#17 0x7fa49a29caa4 &lt;unknown&gt;
+#18 0x7fa49a329c3c &lt;unknown&gt;
+
+[RETRY] FAIL on 3. retry.</status>
+</test>
+<doc>Page Object in Robot Framework</doc>
+<status status="FAIL" start="2025-03-18T19:56:10.671367" elapsed="2.291824"/>
+</suite>
+<status status="FAIL" start="2025-03-18T19:56:10.659163" elapsed="2.304911"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="1" skip="0">Tests</stat>
+<stat name="Login" id="s1-s1" pass="0" fail="1" skip="0">Tests.Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-18T19:56:12.755264" level="WARN" html="true">Test '&lt;a onclick="makeElementVisible('s1-s1-t1')" href="#s1-s1-t1" title="Link to details"&gt;Verify Successful Login to OrangeHRM&lt;/a&gt;' has been retried 3 times (max: 3).</msg>
+</errors>
+</robot>

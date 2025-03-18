@@ -21,4 +21,8 @@ Logout
 *** Keywords ***
 Opening Browser
     [Arguments]  ${site_url}  ${browser}
-    Open Browser  ${site_url}  ${browser}
+    ${options}  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys
+    Call Method  ${options}  add_argument  --disable-gpu
+    Call Method  ${options}  add_argument  --headless
+    Open Browser  ${site_url}  ${browser}  options=${options}
+    Set Window Size    1920    1080

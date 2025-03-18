@@ -3,7 +3,16 @@ import subprocess
 
 def main():
     subprocess.run(
-        ["robot", "--listener", "RetryFailed:3", "--outputdir", "reports/", "Tests"]
+        [
+            "robot",
+            "--listener",
+            "RetryFailed:3",
+            "--outputdir",
+            "reports/",
+            "--report",
+            "index",
+            "Tests",
+        ]
     )
 
 

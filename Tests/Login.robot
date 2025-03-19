@@ -1,24 +1,25 @@
 *** Settings ***
-Documentation       Page Object in Robot Framework
+Documentation       This suite contains tests for verifying login functionality in OrangeHRM.
 
 Library             SeleniumLibrary
 Variables           ../PageObject/TestData/Testdata.py
-Resource            ../PageObject/KeywordDefinitionFiles/Common.robot
-Resource            ../PageObject/KeywordDefinitionFiles/Dashboard.robot
-Resource            ../PageObject/KeywordDefinitionFiles/Login.robot
+Resource            ../PageObject/KeywordDefinitionFiles/Common.resource
+Resource            ../PageObject/KeywordDefinitionFiles/Dashboard.resource
+Resource            ../PageObject/KeywordDefinitionFiles/Login.resource
 
 
 *** Variables ***
-${site_url}     https://opensource-demo.orangehrmlive.com/
-${homepage}     https://orangehrmlive.com/
-${browser}      Chrome
+${SITE_URL}     https://opensource-demo.orangehrmlive.com/
+${HOMEPAGE}     https://orangehrmlive.com/
+${BROWSER}      Chrome
 
 
 *** Test Cases ***
 Verify Successful Login to OrangeHRM
-    [Documentation]    This test case verifies that the user is able to successfully Login and Logout to OrangeHRM using Page Object
+    [Documentation]    This test case verifies that the user is able to successfully Login and Logout to OrangeHRM
+    ...    using Page Object
     [Tags]    smoke
-    Opening Browser    ${homepage}    ${browser}
-    Login    ${site_url}    ${user_name}    ${password}
-    Verify dashboard is displayed
+    OpeningBrowser    ${HOMEPAGE}    ${BROWSER}
+    Login    ${SITE_URL}    ${user_name}    ${password}
+    VerifyDashboardIsDisplayed
     Close Browser

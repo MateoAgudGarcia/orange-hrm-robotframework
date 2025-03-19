@@ -7,10 +7,14 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
   - repo: https://github.com/pycqa/flake8
-    rev: 7.1.0
+    rev: 7.1.2
     hooks:
       - id: flake8
   - repo: https://github.com/pycqa/pylint
     rev: v3.3.5
     hooks:
       - id: pylint
+  - repo: https://github.com/MarketSquare/robotframework-robocop
+    rev: 5.8.1
+    hooks:
+      - id: robocop

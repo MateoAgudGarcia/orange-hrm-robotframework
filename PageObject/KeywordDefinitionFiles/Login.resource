@@ -1,9 +1,13 @@
 *** Settings ***
-Library         SeleniumLibrary
-Variables       ../Locators/Locators.py
+Documentation       This resource file contains keywords for the login functionality.
+
+Library             SeleniumLibrary
+Variables           ../Locators/Locators.py
+
 
 *** Keywords ***
 Login
+    [Documentation]    Logs in to the application using the provided URL, username, and password.
     [Arguments]    ${url}    ${username}    ${password}
     Go To    ${url}
     Wait Until Element Is Visible    ${login_username}

@@ -13,3 +13,8 @@ VerifyDashboardIsDisplayed
     Wait Until Element Is Visible    ${title}
     VerifyPageTitleIsCorrect    Dashboard    ${title}
     Element Should Not Be Visible    ${login_title}
+
+OpenPimModule
+    [Documentation]    Opens the PIM module by clicking on the corresponding element.
+    Wait Until Element Is Enabled    ${view_pim_module}
+    Click Element    ${view_pim_module}

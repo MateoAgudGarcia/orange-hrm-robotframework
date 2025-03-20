@@ -29,4 +29,4 @@ OpeningBrowser
     Call Method    ${options}    add_argument    --disable-gpu
     Call Method    ${options}    add_argument    --headless
     Open Browser    ${site_url}    ${browser}    options=${options}
-    Set Window Size    1920    1080
+    Set Window Size    1050    1000

@@ -52,3 +52,49 @@ side_panel_header = build_selector("css", "div.oxd-sidepanel-header")
 side_panel_body = build_selector("css", "div.oxd-sidepanel-body")
 view_pim_module = build_selector("css", "a[href$='viewPimModule']", side_panel_body)
 view_admin_module = build_selector("css", "a[href$='viewAdminModule']", side_panel_body)
+
+# Layout context
+hrm_layout_context = build_selector("css", "div.oxd-layout-context")
+table_filter = build_selector("css", "div.oxd-table-filter", hrm_layout_context)
+header_container = build_selector(
+    "css", "div.orangehrm-header-container", hrm_layout_context
+)
+content_container = build_selector("css", "div.orangehrm-container", hrm_layout_context)
+table_loader = build_selector("css", "div.oxd-table-loader", content_container)
+delete_first_user = build_selector(
+    "css", "div.oxd-table-card button:nth-of-type(2)", content_container
+)
+bottom_container = build_selector(
+    "css", "div.orangehrm-bottom-container", hrm_layout_context
+)
+hrm_footer = build_selector("css", "div.oxd-layout-footer")
+form_loader = build_selector("css", "div.oxd-form-loader", hrm_layout_context)
+
+# PIM module
+add_user_button = build_selector("css", "button.oxd-button", header_container)
+employee_name_search = build_selector(
+    "css",
+    ".oxd-grid-item:nth-of-type(1) input[placeholder='Type for hints...']",
+    table_filter,
+)
+employee_table_search_button = build_selector(
+    "css", "button[type='submit']", table_filter
+)
+employee_container = build_selector(
+    "css", "div.orangehrm-employee-container", hrm_layout_context
+)
+first_name_input = build_selector("name", "firstName", employee_container)
+middle_name_input = build_selector("name", "middleName", employee_container)
+last_name_input = build_selector("name", "lastName", employee_container)
+submit_button = build_selector("css", "button[type='submit']", hrm_layout_context)
+employee_edit_name = build_selector("css", "div.orangehrm-edit-employee-name > h6")
+
+# Alerts
+success_message = build_selector("css", "div.oxd-toast--success")
+
+# Delete user popup
+popup_container = build_selector("css", "div.orangehrm-dialog-popup")
+cancel_popup_button = build_selector("css", "button.oxd-button--ghost", popup_container)
+delete_popup_button = build_selector(
+    "css", "button.oxd-button--label-danger", popup_container
+)

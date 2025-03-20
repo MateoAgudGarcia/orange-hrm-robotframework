@@ -32,3 +32,14 @@ Open PIM Module
     VerifyDashboardIsDisplayed
     OpenPIMModule
     Close Browser
+
+Add an user within PIM Module
+    [Documentation]    This test case verifies that the user is able to add an user within PIM module
+    [Tags]    smoke
+    OpeningBrowser    ${HOMEPAGE}    ${BROWSER}
+    Login    ${SITE_URL}    ${user_name}    ${password}
+    VerifyDashboardIsDisplayed
+    OpenPIMModule
+    AddUser
+    DeleteUser
+    Close Browser

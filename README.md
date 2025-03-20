@@ -1,4 +1,4 @@
-# Orange HRM - Robot Framework
+# Orange HRM - Robot Framework ![Status](https://github.com/MateoAgudGarcia/orange-hrm-robotframework/actions/workflows/main-branch-deployment.yml/badge.svg)
 
 ## Description
 
@@ -44,6 +44,8 @@ poetry run robot-tests
 ```
 
 This will run all test cases and generate logs and reports in the `results/` directory.
+
+### Last 30 builds deployed using GH Pages: [Orange HRM - Robot Framework](https://mateoagudgarcia.github.io/orange-hrm-robotframework)
 
 ## Project Structure
 

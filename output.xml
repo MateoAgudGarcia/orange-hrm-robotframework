@@ -1,684 +1,682 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.2.2 (Python 3.13.2 on linux)" generated="2025-03-20T23:03:40.597037" rpa="false" schemaversion="5">
+<robot generator="Rebot 7.2.2 (Python 3.13.2 on linux)" generated="2025-03-25T18:08:14.435229" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests">
 <suite id="s1-s1" name="Login" source="/home/runner/work/orange-hrm-robotframework/orange-hrm-robotframework/Tests/Login.robot">
 <test id="s1-s1-t1" name="Verify Successful Login to OrangeHRM" line="18">
 <kw name="OpeningBrowser" owner="Common">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-20T23:03:17.236264" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fd0e8079010&gt;</msg>
+<msg time="2025-03-25T18:07:51.212789" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff300441010&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-20T23:03:17.235937" elapsed="0.000376"/>
+<status status="PASS" start="2025-03-25T18:07:51.212504" elapsed="0.000331"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:17.236464" elapsed="0.000156"/>
+<status status="PASS" start="2025-03-25T18:07:51.212974" elapsed="0.000145"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:17.236740" elapsed="0.000155"/>
+<status status="PASS" start="2025-03-25T18:07:51.213230" elapsed="0.000121"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:17.237303" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
+<msg time="2025-03-25T18:07:51.213751" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:17.237025" elapsed="3.007247"/>
+<status status="PASS" start="2025-03-25T18:07:51.213498" elapsed="2.803610"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1050</arg>
 <arg>1000</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.244553" elapsed="0.036913"/>
+<status status="PASS" start="2025-03-25T18:07:54.017332" elapsed="0.075862"/>
 </kw>
 <arg>${HOMEPAGE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a browser with specified options and navigates to the given site URL.</doc>
-<status status="PASS" start="2025-03-20T23:03:17.235134" elapsed="3.046558"/>
+<status status="PASS" start="2025-03-25T18:07:51.211759" elapsed="2.881619"/>
 </kw>
 <kw name="Login" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:20.282776" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg time="2025-03-25T18:07:54.094288" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.282537" elapsed="0.456373"/>
+<status status="PASS" start="2025-03-25T18:07:54.094129" elapsed="0.497604"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_username}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.739132" elapsed="0.223444"/>
+<status status="PASS" start="2025-03-25T18:07:54.591942" elapsed="0.223373"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_password}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.962805" elapsed="0.014190"/>
+<status status="PASS" start="2025-03-25T18:07:54.815551" elapsed="0.014150"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:20.977432" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
+<msg time="2025-03-25T18:07:54.830084" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
 <arg>${login_username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.977171" elapsed="0.065190"/>
+<status status="PASS" start="2025-03-25T18:07:54.829850" elapsed="0.063759"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:21.042877" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
+<msg time="2025-03-25T18:07:54.894089" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
 <arg>${login_password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.042570" elapsed="0.062052"/>
+<status status="PASS" start="2025-03-25T18:07:54.893815" elapsed="0.056969"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${login_submit}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.104861" elapsed="0.017634"/>
+<status status="PASS" start="2025-03-25T18:07:54.950974" elapsed="0.016850"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:21.122923" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
+<msg time="2025-03-25T18:07:54.968159" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
 <arg>${login_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.122660" elapsed="0.626253"/>
+<status status="PASS" start="2025-03-25T18:07:54.967966" elapsed="0.643335"/>
 </kw>
 <arg>${SITE_URL}</arg>
 <arg>${user_name}</arg>
 <arg>${password}</arg>
 <doc>Logs in to the application using the provided URL, username, and password.</doc>
-<status status="PASS" start="2025-03-20T23:03:20.282043" elapsed="1.467007"/>
+<status status="PASS" start="2025-03-25T18:07:54.093676" elapsed="1.517794"/>
 </kw>
 <kw name="VerifyDashboardIsDisplayed" owner="Dashboard">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.749677" elapsed="0.220834"/>
+<status status="PASS" start="2025-03-25T18:07:55.611955" elapsed="0.225965"/>
 </kw>
 <kw name="VerifyPageTitleIsCorrect" owner="Common">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:21.986277" level="INFO">${actual_title} = Dashboard</msg>
+<msg time="2025-03-25T18:07:55.861773" level="INFO">${actual_title} = Dashboard</msg>
 <var>${actual_title}</var>
 <arg>${locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.971133" elapsed="0.015193"/>
+<status status="PASS" start="2025-03-25T18:07:55.838677" elapsed="0.023168"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_title}</arg>
 <arg>${expected_title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.986493" elapsed="0.000237"/>
+<status status="PASS" start="2025-03-25T18:07:55.862087" elapsed="0.000345"/>
 </kw>
 <arg>Dashboard</arg>
 <arg>${title}</arg>
 <doc>Verifies that the page title matches the expected title.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.970790" elapsed="0.016053"/>
+<status status="PASS" start="2025-03-25T18:07:55.838246" elapsed="0.024296"/>
 </kw>
 <kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:21.994649" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
+<msg time="2025-03-25T18:07:55.887358" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
 <arg>${login_title}</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.986963" elapsed="0.007752"/>
+<status status="PASS" start="2025-03-25T18:07:55.862699" elapsed="0.024806"/>
 </kw>
 <doc>Verifies that the dashboard page is displayed correctly.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.749309" elapsed="0.245515"/>
+<status status="PASS" start="2025-03-25T18:07:55.611688" elapsed="0.275926"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-20T23:03:21.994940" elapsed="0.078735"/>
+<status status="PASS" start="2025-03-25T18:07:55.887769" elapsed="0.076789"/>
 </kw>
 <doc>This test case verifies that the user is able to successfully Login and Logout to OrangeHRM
 using Page Object</doc>
 <tag>smoke</tag>
-<status status="PASS" start="2025-03-20T23:03:17.234124" elapsed="4.839766"/>
+<status status="PASS" start="2025-03-25T18:07:51.210852" elapsed="4.753888"/>
 </test>
 <test id="s1-s1-t2" name="Open PIM Module" line="27">
 <kw name="OpeningBrowser" owner="Common">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-20T23:03:22.075390" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fd0e776ec10&gt;</msg>
+<msg time="2025-03-25T18:07:55.966245" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff300e8ac10&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-20T23:03:22.075118" elapsed="0.000308"/>
+<status status="PASS" start="2025-03-25T18:07:55.965943" elapsed="0.000340"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:22.075542" elapsed="0.000135"/>
+<status status="PASS" start="2025-03-25T18:07:55.966436" elapsed="0.000160"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:22.075809" elapsed="0.000133"/>
+<status status="PASS" start="2025-03-25T18:07:55.966722" elapsed="0.000143"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:22.076308" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
+<msg time="2025-03-25T18:07:55.967260" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:22.076064" elapsed="1.860240"/>
+<status status="PASS" start="2025-03-25T18:07:55.966999" elapsed="1.824583"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1050</arg>
 <arg>1000</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2025-03-20T23:03:23.936665" elapsed="0.037354"/>
+<status status="PASS" start="2025-03-25T18:07:57.791888" elapsed="0.062034"/>
 </kw>
 <arg>${HOMEPAGE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a browser with specified options and navigates to the given site URL.</doc>
-<status status="PASS" start="2025-03-20T23:03:22.074748" elapsed="1.899449"/>
+<status status="PASS" start="2025-03-25T18:07:55.965579" elapsed="1.888529"/>
 </kw>
 <kw name="Login" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:23.975242" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg time="2025-03-25T18:07:57.855209" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:23.975048" elapsed="0.459808"/>
+<status status="PASS" start="2025-03-25T18:07:57.855006" elapsed="0.465270"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_username}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.435153" elapsed="0.222705"/>
+<status status="PASS" start="2025-03-25T18:07:58.320513" elapsed="0.222472"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_password}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.658081" elapsed="0.014545"/>
+<status status="PASS" start="2025-03-25T18:07:58.543187" elapsed="0.013657"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:24.673112" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
+<msg time="2025-03-25T18:07:58.557198" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
 <arg>${login_username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.672847" elapsed="0.062054"/>
+<status status="PASS" start="2025-03-25T18:07:58.556984" elapsed="0.057830"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:24.735384" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
+<msg time="2025-03-25T18:07:58.615290" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
 <arg>${login_password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.735110" elapsed="0.061044"/>
+<status status="PASS" start="2025-03-25T18:07:58.615018" elapsed="0.058912"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${login_submit}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.796370" elapsed="0.018413"/>
+<status status="PASS" start="2025-03-25T18:07:58.674125" elapsed="0.017297"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:24.815230" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
+<msg time="2025-03-25T18:07:58.691768" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
 <arg>${login_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.814983" elapsed="0.046589"/>
+<status status="PASS" start="2025-03-25T18:07:58.691569" elapsed="0.650914"/>
 </kw>
 <arg>${SITE_URL}</arg>
 <arg>${user_name}</arg>
 <arg>${password}</arg>
 <doc>Logs in to the application using the provided URL, username, and password.</doc>
-<status status="PASS" start="2025-03-20T23:03:23.974485" elapsed="0.887235"/>
+<status status="PASS" start="2025-03-25T18:07:57.854457" elapsed="1.488155"/>
 </kw>
 <kw name="VerifyDashboardIsDisplayed" owner="Dashboard">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.862359" elapsed="0.817182"/>
+<status status="PASS" start="2025-03-25T18:07:59.343084" elapsed="0.221935"/>
 </kw>
 <kw name="VerifyPageTitleIsCorrect" owner="Common">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:25.697473" level="INFO">${actual_title} = Dashboard</msg>
+<msg time="2025-03-25T18:07:59.580694" level="INFO">${actual_title} = Dashboard</msg>
 <var>${actual_title}</var>
 <arg>${locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.680143" elapsed="0.017384"/>
+<status status="PASS" start="2025-03-25T18:07:59.565623" elapsed="0.015116"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_title}</arg>
 <arg>${expected_title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.697716" elapsed="0.000269"/>
+<status status="PASS" start="2025-03-25T18:07:59.580893" elapsed="0.000221"/>
 </kw>
 <arg>Dashboard</arg>
 <arg>${title}</arg>
 <doc>Verifies that the page title matches the expected title.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.679808" elapsed="0.018260"/>
+<status status="PASS" start="2025-03-25T18:07:59.565260" elapsed="0.015931"/>
 </kw>
 <kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:25.713437" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
+<msg time="2025-03-25T18:07:59.588778" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
 <arg>${login_title}</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.698187" elapsed="0.015401"/>
+<status status="PASS" start="2025-03-25T18:07:59.581305" elapsed="0.007539"/>
 </kw>
 <doc>Verifies that the dashboard page is displayed correctly.</doc>
-<status status="PASS" start="2025-03-20T23:03:24.862001" elapsed="0.851729"/>
+<status status="PASS" start="2025-03-25T18:07:59.342820" elapsed="0.246104"/>
 </kw>
 <kw name="OpenPimModule" owner="Dashboard">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${view_pim_module}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.714372" elapsed="0.088295"/>
+<status status="PASS" start="2025-03-25T18:07:59.589322" elapsed="0.025016"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:25.803158" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
+<msg time="2025-03-25T18:07:59.614848" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
 <arg>${view_pim_module}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.802902" elapsed="0.301341"/>
+<status status="PASS" start="2025-03-25T18:07:59.614571" elapsed="0.462095"/>
 </kw>
 <doc>Opens the PIM module by clicking on the corresponding element.</doc>
-<status status="PASS" start="2025-03-20T23:03:25.714017" elapsed="0.390360"/>
+<status status="PASS" start="2025-03-25T18:07:59.589093" elapsed="0.487706"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.104540" elapsed="0.065564"/>
+<status status="PASS" start="2025-03-25T18:08:00.076961" elapsed="0.063184"/>
 </kw>
 <doc>This test case verifies that the user is able to open PIM module</doc>
 <tag>smoke</tag>
-<status status="PASS" start="2025-03-20T23:03:22.074202" elapsed="4.096108"/>
+<status status="PASS" start="2025-03-25T18:07:55.965038" elapsed="4.175295"/>
 </test>
 <test id="s1-s1-t3" name="Add an user within PIM Module" line="36">
 <kw name="OpeningBrowser" owner="Common">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-03-20T23:03:26.171681" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fd0e776de50&gt;</msg>
+<msg time="2025-03-25T18:08:00.141779" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff300e89e50&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.171435" elapsed="0.000281"/>
+<status status="PASS" start="2025-03-25T18:08:00.141456" elapsed="0.000369"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.171889" elapsed="0.000197"/>
+<status status="PASS" start="2025-03-25T18:08:00.141965" elapsed="0.000138"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.172222" elapsed="0.000157"/>
+<status status="PASS" start="2025-03-25T18:08:00.142202" elapsed="0.000122"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:26.172729" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
+<msg time="2025-03-25T18:08:00.142697" level="INFO">Opening browser 'Chrome' to base url 'https://orangehrmlive.com/'.</msg>
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.172503" elapsed="2.054071"/>
+<status status="PASS" start="2025-03-25T18:08:00.142465" elapsed="1.910235"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1050</arg>
 <arg>1000</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.226901" elapsed="0.055290"/>
+<status status="PASS" start="2025-03-25T18:08:02.052954" elapsed="0.035693"/>
 </kw>
 <arg>${HOMEPAGE}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a browser with specified options and navigates to the given site URL.</doc>
-<status status="PASS" start="2025-03-20T23:03:26.171115" elapsed="2.115930"/>
+<status status="PASS" start="2025-03-25T18:08:00.141092" elapsed="1.947720"/>
 </kw>
 <kw name="Login" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:28.288119" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<msg time="2025-03-25T18:08:02.089826" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
 <arg>${url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.287944" elapsed="0.469664"/>
+<status status="PASS" start="2025-03-25T18:08:02.089622" elapsed="0.484967"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_username}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.757855" elapsed="0.223093"/>
+<status status="PASS" start="2025-03-25T18:08:02.574791" elapsed="0.222123"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${login_password}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.981246" elapsed="0.014761"/>
+<status status="PASS" start="2025-03-25T18:08:02.797177" elapsed="0.013806"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:28.996462" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
+<msg time="2025-03-25T18:08:02.811418" level="INFO">Typing text 'Admin' into text field 'css:input[name='username']'.</msg>
 <arg>${login_username}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.996202" elapsed="0.063580"/>
+<status status="PASS" start="2025-03-25T18:08:02.811147" elapsed="0.058765"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:29.060279" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
+<msg time="2025-03-25T18:08:02.870415" level="INFO">Typing text 'admin123' into text field 'css:input[name='password']'.</msg>
 <arg>${login_password}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:29.060002" elapsed="0.061126"/>
+<status status="PASS" start="2025-03-25T18:08:02.870118" elapsed="0.059676"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${login_submit}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:29.121357" elapsed="0.018821"/>
+<status status="PASS" start="2025-03-25T18:08:02.929992" elapsed="0.017205"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:29.140633" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
+<msg time="2025-03-25T18:08:02.947551" level="INFO">Clicking element 'css:button.orangehrm-login-button'.</msg>
 <arg>${login_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:29.140383" elapsed="0.046888"/>
+<status status="PASS" start="2025-03-25T18:08:02.947336" elapsed="0.673667"/>
 </kw>
 <arg>${SITE_URL}</arg>
 <arg>${user_name}</arg>
 <arg>${password}</arg>
 <doc>Logs in to the application using the provided URL, username, and password.</doc>
-<status status="PASS" start="2025-03-20T23:03:28.287379" elapsed="0.900041"/>
+<status status="PASS" start="2025-03-25T18:08:02.089110" elapsed="1.532025"/>
 </kw>
 <kw name="VerifyDashboardIsDisplayed" owner="Dashboard">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${title}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:29.188089" elapsed="0.824627"/>
+<status status="PASS" start="2025-03-25T18:08:03.621640" elapsed="0.219820"/>
 </kw>
 <kw name="VerifyPageTitleIsCorrect" owner="Common">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:30.037383" level="INFO">${actual_title} = Dashboard</msg>
+<msg time="2025-03-25T18:08:03.857793" level="INFO">${actual_title} = Dashboard</msg>
 <var>${actual_title}</var>
 <arg>${locator}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.013322" elapsed="0.024125"/>
+<status status="PASS" start="2025-03-25T18:08:03.842038" elapsed="0.015800"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_title}</arg>
 <arg>${expected_title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.037687" elapsed="0.000325"/>
+<status status="PASS" start="2025-03-25T18:08:03.857995" elapsed="0.000220"/>
 </kw>
 <arg>Dashboard</arg>
 <arg>${title}</arg>
 <doc>Verifies that the page title matches the expected title.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.012984" elapsed="0.025140"/>
+<status status="PASS" start="2025-03-25T18:08:03.841703" elapsed="0.016591"/>
 </kw>
 <kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:30.091633" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
+<msg time="2025-03-25T18:08:03.867151" level="INFO">Element 'css:h5.orangehrm-login-title' did not exist.</msg>
 <arg>${login_title}</arg>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.038278" elapsed="0.053470"/>
+<status status="PASS" start="2025-03-25T18:08:03.858437" elapsed="0.008792"/>
 </kw>
 <doc>Verifies that the dashboard page is displayed correctly.</doc>
-<status status="PASS" start="2025-03-20T23:03:29.187712" elapsed="0.904172"/>
+<status status="PASS" start="2025-03-25T18:08:03.621343" elapsed="0.245974"/>
 </kw>
 <kw name="OpenPimModule" owner="Dashboard">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${view_pim_module}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.092353" elapsed="0.036036"/>
+<status status="PASS" start="2025-03-25T18:08:03.867792" elapsed="0.085005"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:30.128871" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
+<msg time="2025-03-25T18:08:03.953412" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
 <arg>${view_pim_module}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.128595" elapsed="0.305662"/>
+<status status="PASS" start="2025-03-25T18:08:03.953063" elapsed="0.359963"/>
 </kw>
 <doc>Opens the PIM module by clicking on the corresponding element.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.092084" elapsed="0.342327"/>
+<status status="PASS" start="2025-03-25T18:08:03.867511" elapsed="0.445668"/>
 </kw>
 <kw name="AddUser" owner="Dashboard">
 <kw name="OpenAddUserForm" owner="Dashboard">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${header_container}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.435182" elapsed="0.231042"/>
+<status status="PASS" start="2025-03-25T18:08:04.314132" elapsed="0.228216"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${add_user_button}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.666436" elapsed="0.028983"/>
+<status status="PASS" start="2025-03-25T18:08:04.542572" elapsed="0.027241"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:30.695893" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-header-container &gt;&gt; css:button.oxd-button'.</msg>
+<msg time="2025-03-25T18:08:04.570225" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-header-container &gt;&gt; css:button.oxd-button'.</msg>
 <arg>${add_user_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.695621" elapsed="0.248596"/>
+<status status="PASS" start="2025-03-25T18:08:04.569996" elapsed="0.228901"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${form_loader}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.944423" elapsed="0.226372"/>
+<status status="PASS" start="2025-03-25T18:08:04.799106" elapsed="0.225414"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.186331" level="INFO">Element 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-form-loader' is displayed.</msg>
+<msg time="2025-03-25T18:08:05.047437" level="INFO">Element 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-form-loader' is displayed.</msg>
 <arg>${form_loader}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.171000" elapsed="0.015427"/>
+<status status="PASS" start="2025-03-25T18:08:05.024718" elapsed="0.022843"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.211095" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
 <arg>${form_loader}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.186599" elapsed="0.235026"/>
+<status status="PASS" start="2025-03-25T18:08:05.047791" elapsed="0.224290"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${employee_container}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.421856" elapsed="0.017104"/>
+<status status="PASS" start="2025-03-25T18:08:05.272256" elapsed="0.016605"/>
 </kw>
 <doc>Opens the Add User form.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.434966" elapsed="1.004107"/>
+<status status="PASS" start="2025-03-25T18:08:04.313806" elapsed="0.975145"/>
 </kw>
 <kw name="FillUserDetails" owner="Dashboard">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.439769" level="INFO">Typing text 'Melanie' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:firstName'.</msg>
+<msg time="2025-03-25T18:08:05.289568" level="INFO">Typing text 'Tyler' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:firstName'.</msg>
 <arg>${first_name_input}</arg>
 <arg>${first_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.439525" elapsed="0.069349"/>
+<status status="PASS" start="2025-03-25T18:08:05.289345" elapsed="0.064827"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.509356" level="INFO">Typing text 'Jason' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:middleName'.</msg>
+<msg time="2025-03-25T18:08:05.354775" level="INFO">Typing text 'Samuel' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:middleName'.</msg>
 <arg>${middle_name_input}</arg>
 <arg>${middle_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.509085" elapsed="0.071756"/>
+<status status="PASS" start="2025-03-25T18:08:05.354440" elapsed="0.069441"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.581333" level="INFO">Typing text 'Anderson' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:lastName'.</msg>
+<msg time="2025-03-25T18:08:05.424314" level="INFO">Typing text 'Andrews' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-employee-container &gt;&gt; name:lastName'.</msg>
 <arg>${last_name_input}</arg>
 <arg>${last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.581050" elapsed="0.072099"/>
+<status status="PASS" start="2025-03-25T18:08:05.424063" elapsed="0.067453"/>
 </kw>
 <doc>Fills in the user details in the form.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.439262" elapsed="0.214021"/>
+<status status="PASS" start="2025-03-25T18:08:05.289113" elapsed="0.202525"/>
 </kw>
 <kw name="SubmitUserForm" owner="Dashboard">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${submit_button}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.653928" elapsed="0.022525"/>
+<status status="PASS" start="2025-03-25T18:08:05.492114" elapsed="0.021616"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:31.676907" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:button[type='submit']'.</msg>
+<msg time="2025-03-25T18:08:05.514054" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:button[type='submit']'.</msg>
 <arg>${submit_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.676642" elapsed="0.056945"/>
+<status status="PASS" start="2025-03-25T18:08:05.513865" elapsed="0.054654"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${success_message}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.733849" elapsed="0.835968"/>
+<status status="PASS" start="2025-03-25T18:08:05.568684" elapsed="0.832088"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${form_loader}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:32.570010" elapsed="0.014469"/>
+<status status="PASS" start="2025-03-25T18:08:06.400963" elapsed="0.013731"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:32.593641" level="INFO">Element 'css:div.oxd-toast--success' is displayed.</msg>
+<msg time="2025-03-25T18:08:06.423305" level="INFO">Element 'css:div.oxd-toast--success' is displayed.</msg>
 <arg>${success_message}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:32.584666" elapsed="0.009059"/>
+<status status="PASS" start="2025-03-25T18:08:06.414827" elapsed="0.008574"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>${success_message}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:32.593904" elapsed="2.533685"/>
+<status status="PASS" start="2025-03-25T18:08:06.423524" elapsed="2.547483"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:35.576823" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
 <arg>${form_loader}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.127823" elapsed="0.659968"/>
+<status status="PASS" start="2025-03-25T18:08:08.971207" elapsed="0.648591"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${employee_edit_name}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.787990" elapsed="0.013062"/>
+<status status="PASS" start="2025-03-25T18:08:09.619992" elapsed="0.011766"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:35.801564" level="INFO">Verifying element 'css:div.orangehrm-edit-employee-name &gt; h6' contains exact text 'Melanie Anderson'.</msg>
+<msg time="2025-03-25T18:08:09.632125" level="INFO">Verifying element 'css:div.orangehrm-edit-employee-name &gt; h6' contains exact text 'Tyler Andrews'.</msg>
 <arg>${employee_edit_name}</arg>
 <arg>${first_name} ${last_name}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.801254" elapsed="0.011255"/>
+<status status="PASS" start="2025-03-25T18:08:09.631886" elapsed="0.010207"/>
 </kw>
 <doc>Submits the Add User form.</doc>
-<status status="PASS" start="2025-03-20T23:03:31.653568" elapsed="4.159046"/>
+<status status="PASS" start="2025-03-25T18:08:05.491850" elapsed="4.150335"/>
 </kw>
 <doc>Adds a new user to the system.</doc>
-<status status="PASS" start="2025-03-20T23:03:30.434633" elapsed="5.378047"/>
+<status status="PASS" start="2025-03-25T18:08:04.313409" elapsed="5.328839"/>
 </kw>
 <kw name="DeleteUser" owner="Dashboard">
 <kw name="OpenPimModule" owner="Dashboard">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${view_pim_module}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.813340" elapsed="0.018160"/>
+<status status="PASS" start="2025-03-25T18:08:09.642862" elapsed="0.017081"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:35.831956" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
+<msg time="2025-03-25T18:08:09.660226" level="INFO">Clicking element 'css:div.oxd-sidepanel-body &gt;&gt; css:a[href$='viewPimModule']'.</msg>
 <arg>${view_pim_module}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.831691" elapsed="0.282100"/>
+<status status="PASS" start="2025-03-25T18:08:09.660064" elapsed="0.298518"/>
 </kw>
 <doc>Opens the PIM module by clicking on the corresponding element.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.813147" elapsed="0.300788"/>
+<status status="PASS" start="2025-03-25T18:08:09.642679" elapsed="0.316076"/>
 </kw>
 <kw name="OpenDeleteUserForm" owner="Dashboard">
 <kw name="SearchForUser" owner="Dashboard">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${table_filter}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.114703" elapsed="0.231656"/>
+<status status="PASS" start="2025-03-25T18:08:09.959533" elapsed="0.225700"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${employee_name_search}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.346558" elapsed="0.026300"/>
+<status status="PASS" start="2025-03-25T18:08:10.185455" elapsed="0.023889"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:36.373358" level="INFO">Typing text 'Melanie Jason Anderson' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-table-filter &gt;&gt; css:.oxd-grid-item:nth-of-type(1) input[placeholder='Type for hints...']'.</msg>
+<msg time="2025-03-25T18:08:10.210033" level="INFO">Typing text 'Tyler Samuel Andrews' into text field 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-table-filter &gt;&gt; css:.oxd-grid-item:nth-of-type(1) input[placeholder='Type for hints...']'.</msg>
 <arg>${employee_name_search}</arg>
 <arg>${first_name} ${middle_name} ${last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.373049" elapsed="0.126434"/>
+<status status="PASS" start="2025-03-25T18:08:10.209597" elapsed="0.074238"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${employee_table_search_button}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.499730" elapsed="0.039839"/>
+<status status="PASS" start="2025-03-25T18:08:10.284031" elapsed="0.023016"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:36.540068" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-table-filter &gt;&gt; css:button[type='submit']'.</msg>
+<msg time="2025-03-25T18:08:10.307464" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.oxd-table-filter &gt;&gt; css:button[type='submit']'.</msg>
 <arg>${employee_table_search_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.539811" elapsed="0.079931"/>
+<status status="PASS" start="2025-03-25T18:08:10.307219" elapsed="0.178969"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${table_loader}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.620000" elapsed="0.036438"/>
+<status status="PASS" start="2025-03-25T18:08:10.486457" elapsed="0.026026"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:36.681596" level="INFO">Element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-container &gt;&gt; css:div.oxd-table-loader' is displayed.</msg>
+<msg time="2025-03-25T18:08:10.531214" level="INFO">Element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-container &gt;&gt; css:div.oxd-table-loader' is displayed.</msg>
 <arg>${table_loader}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.656668" elapsed="0.025073"/>
+<status status="PASS" start="2025-03-25T18:08:10.512659" elapsed="0.018667"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>${table_loader}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.682004" elapsed="0.262316"/>
+<status status="PASS" start="2025-03-25T18:08:10.531510" elapsed="0.259544"/>
 </kw>
 <doc>Searches for the user in the table.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.114479" elapsed="0.829967"/>
+<status status="PASS" start="2025-03-25T18:08:09.959293" elapsed="0.831894"/>
 </kw>
 <kw name="ConfirmAndDeleteUser" owner="Dashboard">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${delete_first_user}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.944963" elapsed="0.025223"/>
+<status status="PASS" start="2025-03-25T18:08:10.791708" elapsed="0.030627"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:36.970600" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-container &gt;&gt; css:div.oxd-table-card button:nth-of-type(2)'.</msg>
+<msg time="2025-03-25T18:08:10.822895" level="INFO">Clicking element 'css:div.oxd-layout-context &gt;&gt; css:div.orangehrm-container &gt;&gt; css:div.oxd-table-card button:nth-of-type(2)'.</msg>
 <arg>${delete_first_user}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.970370" elapsed="0.056698"/>
+<status status="PASS" start="2025-03-25T18:08:10.822589" elapsed="0.071666"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${popup_container}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.027291" elapsed="0.228255"/>
+<status status="PASS" start="2025-03-25T18:08:10.894538" elapsed="0.231400"/>
 </kw>
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${delete_popup_button}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.255872" elapsed="0.027778"/>
+<status status="PASS" start="2025-03-25T18:08:11.126133" elapsed="0.024703"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:37.284246" level="INFO">Clicking element 'css:div.orangehrm-dialog-popup &gt;&gt; css:button.oxd-button--label-danger'.</msg>
+<msg time="2025-03-25T18:08:11.151282" level="INFO">Clicking element 'css:div.orangehrm-dialog-popup &gt;&gt; css:button.oxd-button--label-danger'.</msg>
 <arg>${delete_popup_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.283914" elapsed="0.058897"/>
+<status status="PASS" start="2025-03-25T18:08:11.151036" elapsed="0.050866"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${success_message}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.343073" elapsed="0.218199"/>
+<status status="PASS" start="2025-03-25T18:08:11.202102" elapsed="0.215494"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-03-20T23:03:37.570956" level="INFO">Element 'css:div.oxd-toast--success' is displayed.</msg>
+<msg time="2025-03-25T18:08:11.426398" level="INFO">Element 'css:div.oxd-toast--success' is displayed.</msg>
 <arg>${success_message}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.561478" elapsed="0.009566"/>
+<status status="PASS" start="2025-03-25T18:08:11.417838" elapsed="0.008630"/>
 </kw>
 <kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
 <arg>${success_message}</arg>
 <doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2025-03-20T23:03:37.571207" elapsed="2.948235"/>
+<status status="PASS" start="2025-03-25T18:08:11.426594" elapsed="2.932428"/>
 </kw>
 <doc>Confirms and deletes the user.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.944661" elapsed="3.574902"/>
+<status status="PASS" start="2025-03-25T18:08:10.791430" elapsed="3.567712"/>
 </kw>
 <doc>Opens the Delete User form.</doc>
-<status status="PASS" start="2025-03-20T23:03:36.114136" elapsed="4.405488"/>
+<status status="PASS" start="2025-03-25T18:08:09.958991" elapsed="4.400213"/>
 </kw>
 <doc>Deletes a user from the system.</doc>
-<status status="PASS" start="2025-03-20T23:03:35.812888" elapsed="4.706788"/>
+<status status="PASS" start="2025-03-25T18:08:09.642433" elapsed="4.716823"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-20T23:03:40.519839" elapsed="0.070058"/>
+<status status="PASS" start="2025-03-25T18:08:14.359423" elapsed="0.069069"/>
 </kw>
 <doc>This test case verifies that the user is able to add an user within PIM module</doc>
 <tag>smoke</tag>
-<status status="PASS" start="2025-03-20T23:03:26.170588" elapsed="14.419490"/>
+<status status="PASS" start="2025-03-25T18:08:00.140628" elapsed="14.288036"/>
 </test>
 <doc>This suite contains tests for verifying login functionality in OrangeHRM.</doc>
-<status status="PASS" start="2025-03-20T23:03:16.603645" elapsed="23.986877"/>
+<status status="PASS" start="2025-03-25T18:07:50.553790" elapsed="23.875353"/>
 </suite>
-<status status="PASS" start="2025-03-20T23:03:16.591126" elapsed="24.000097"/>
+<status status="PASS" start="2025-03-25T18:07:50.541594" elapsed="23.888258"/>
 </suite>
 <statistics>
 <total>

@@ -15,6 +15,7 @@ repos:
     hooks:
       - id: pylint
   - repo: https://github.com/MarketSquare/robotframework-robocop
-    rev: 5.8.1
+    rev: v6.0.0
     hooks:
       - id: robocop
+      - id: robocop-format

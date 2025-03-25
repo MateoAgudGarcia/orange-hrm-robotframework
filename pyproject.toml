@@ -3,7 +3,7 @@ name = "orange-hrm-robotframework"
 version = "1.0.0"
 description = "A Robot Framework project for automating Orange HRM application testing."
 authors = [
-    {name = "Mateo Agudelo Garcia",email = "mateo.agudelo80@eia.edu.co"}
+    { name = "Mateo Agudelo Garcia", email = "mateo.agudelo80@eia.edu.co" },
 ]
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
@@ -16,9 +16,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [
-    {include = "PageObject"}
-]
+packages = [{ include = "PageObject" }]
 
 [tool.poetry.group.dev.dependencies]
 robotframework = "^7.2.2"
@@ -33,3 +31,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 robot-tests = "run_robot_tests:main"
+
+[tool.robocop.lint]
+ignore = ["TAG05"]
